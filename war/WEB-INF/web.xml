@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="3.0"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+<!--   <servlet> -->
+<!--     <servlet-name>greetServlet</servlet-name> -->
+<!--     <servlet-class>test.server.GreetingServiceImpl</servlet-class> -->
+<!--   </servlet> -->
+  
+<!--   <servlet-mapping> -->
+<!--     <servlet-name>greetServlet</servlet-name> -->
+<!--     <url-pattern>/testgwt/greet</url-pattern> -->
+<!--   </servlet-mapping> -->
+  
+  
+  
+<!-- 	<servlet> -->
+<!-- 	 	<servlet-name>logServlet</servlet-name> -->
+<!-- 	  	<servlet-class>com.allen_sauer.gwt.log.server.RemoteLoggerServiceImpl</servlet-class> -->
+<!-- 	  <load-on-startup>1</load-on-startup> -->
+<!-- 	   <init-param> -->
+<!-- 	    <param-name>symbolMaps</param-name> -->
+<!-- 	  	<param-value>WEB-INF/deploy/testgwt/symbolMaps/</param-value> -->
+<!-- 	  </init-param> -->
+<!-- 	</servlet> -->
+	
+<!-- 	<servlet-mapping> -->
+<!-- 	  <servlet-name>logServlet</servlet-name> -->
+<!-- 	  <url-pattern>/testgwt/gwt-log</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+
+
+	<servlet>
+	    <servlet-name>gwt-log-remote-logger-servlet</servlet-name>
+	    <servlet-class>com.allen_sauer.gwt.log.server.RemoteLoggerServiceImpl</servlet-class>
+	    <init-param>
+	        <param-name>symbolMaps</param-name>
+			<param-value>/WEB-INF/deploy/testgwt/symbolMaps/</param-value>
+	    </init-param>
+	
+<!-- 		<init-param> -->
+<!-- 		 	<param-name>Access-Control-Allow-Origin</param-name> -->
+<!-- 		 	<param-value>http://http://127.0.0.1:8888</param-value> -->
+<!-- 		</init-param>  -->
+	
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>gwt-log-remote-logger-servlet</servlet-name>
+	    <url-pattern>/testgwt/gwt-log</url-pattern>
+	</servlet-mapping>	  
+  
+  
+
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Testgwt.html</welcome-file>
+  </welcome-file-list>
+  
+
+
+</web-app>
